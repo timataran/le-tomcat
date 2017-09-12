@@ -1,0 +1,28 @@
+# Production Letsencrypt server
+#CA_SERVER=https://acme-v01.api.letsencrypt.org/directory
+
+# Staging (for tests) Letsencrypt server
+CA_SERVER=https://acme-staging.api.letsencrypt.org/directory
+
+KEYSIZE=4096
+
+COUNTRY=UA
+STATE=Unknown
+LOCATION=Unknown
+ORGANIZATION=Unknown
+UNIT=Unknown
+CN=some.domain.com
+EMAIL=admin@some.domain.com
+
+SSL_CONFIG=domain-openssl.cnf
+
+# The domain names list with -d key before each name to use it as parameter to acme_client.jar
+DOMAINS_PARAM="-d some.domain.com -d www.some.domain.com"
+
+# Path to tomcat root (without trailing slash)
+TOMCAT_ROOT=/opt/apache-tomcat-8.0.45
+
+# JKS file which is used by tomcat and other store parameters
+JKS_FILE=/home/tomcat/.keystore
+STORE_PASS=my-cool-password
+KEY_ALIAS=somedomain
